@@ -12,6 +12,7 @@ def generate_sudoku():
         random.shuffle(numbers)
         for j in range(3):
             board[i + j][i + j] = numbers[j]
+    
 
     # Solve the Sudoku
     solve_sudoku(board)
@@ -28,7 +29,6 @@ def generate_sudoku():
                 break
 
     return board
-
 
 
 

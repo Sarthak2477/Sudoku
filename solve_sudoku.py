@@ -1,8 +1,6 @@
 # solve_soduku.py
 board_SIZE = 9
-def solve_sudoku(board,depth=0, max_depth=1000):
-    if depth > max_depth:
-        raise RecursionError("Max recursion depth exceeded")
+def solve_sudoku(board):
     
     empty_cell = find_empty_cell(board)
     if not empty_cell:
@@ -14,7 +12,7 @@ def solve_sudoku(board,depth=0, max_depth=1000):
         if is_valid(board, row, col, num):
             board[row][col] = num
 
-            if solve_sudoku(board, depth + 1, max_depth):
+            if solve_sudoku(board):
                 return True
 
             board[row][col] = 0
