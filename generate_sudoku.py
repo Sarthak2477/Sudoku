@@ -30,6 +30,5 @@ def generate_sudoku():
     return board
 
 
-print(generate_sudoku())
 
 
